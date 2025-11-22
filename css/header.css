@@ -120,3 +120,51 @@
 .burger.toggle span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
+
+/* Mobile menu that hides on desktop and appears when the user clicks the burger icon */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 250px;
+  background: rgba(218,227,253,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  transition: right 0.4s ease;
+  padding: 30px 30px 30px;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  overflow-y: auto; 
+  border-radius: 20px;
+}
+
+.menu-overlay {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.2);
+  z-index: 90;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+}
+
+.mobile-menu .close-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #313BA0;
+  transition: color 0.3s ease;
+  z-index: 310;
+}
+
+.mobile-menu .close-menu:hover {
+  color: #fafafa; 
+}
