@@ -18,7 +18,7 @@
   position: relative;
 }
 
-/* IMAGES AND LINKS IN NAVBAR */
+/* Logo and links in NAVBAR */
 .logo img {
   width: 80px;
   transition: transform 0.25s ease;
@@ -85,4 +85,38 @@
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(49, 59, 160, 0.25);
+}
+
+/* BURGER MENU - Hides in Large Dimensions and opens in Small Dimensions*/
+.burger {
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 300; 
+  position: relative; 
+}
+
+.burger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #313BA0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* CREATING THE X EFFECT */
+.burger.toggle span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.toggle span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
