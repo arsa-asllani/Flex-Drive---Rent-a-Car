@@ -67,3 +67,111 @@ nav li:last-child{
   color: #313BA0;
   transition: all 0.3s ease;
 }
+.logIn-btn:hover {
+  background-color: #313BA0;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(42,63,232,0.28);
+  transform: translateY(-2px);
+}
+
+.center-links {
+  display: flex;
+  justify-content: center;
+}
+
+.right-links {
+  margin-left: auto;
+}
+
+.sidebar{
+  position: fixed;
+  padding: 20px 0;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background: rgba(218,227,253,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.sidebar li{
+  width: 100%;
+}
+
+.sidebar a{
+  width: 100%;
+}
+
+.sidebar li:last-child {
+  margin-left: 0;
+}
+
+.menu-button{
+  display: none;
+}
+
+.center-links a {
+  position: relative;
+  /* overflow: visible; */
+  font-size: 17px;
+}
+
+.center-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #2A3FE8;
+  transition: width 0.3s ease;
+}
+
+.center-links a:hover::after {
+  width: 50%;
+}
+
+.sidebar li:nth-child(n+2):nth-child(-n+4) a {
+  position: relative;
+}
+
+.sidebar li:nth-child(n+2):nth-child(-n+4) a::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: -1px;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #2A3FE8;
+  transition: width 0.3s ease;
+}
+
+.sidebar li:nth-child(n+2):nth-child(-n+4) a:hover::after {
+  width: 20%;
+}
+
+.logIn-btn-mobile{
+  border: 2px solid #313BA0;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #313BA0;
+  transition: all 0.3s ease;
+  max-width: 60px;
+  margin-left: 25px;
+}
+
+.logIn-btn-mobile:hover {
+  background-color: #313BA0;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(42,63,232,0.28);
+  transform: translateY(-2px); 
+}
