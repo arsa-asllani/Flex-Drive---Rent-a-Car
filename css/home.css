@@ -1,0 +1,146 @@
+/* hero section styles */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 clamp(20px, 8vw, 120px);
+  background: linear-gradient(to bottom, var(--primary-light) 10%, rgba(242,246,255,0) 70%);
+  min-height: 80vh;
+}
+
+.hero-content { 
+  max-width: 45%; 
+}
+
+.hero-container h1 {
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 700;
+  margin-top: 5px;
+  line-height: 1.1;
+  color: var(--text-color);
+}
+
+.hero-container h5 {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: clamp(14px, 1.5vw, 15px);
+}
+
+.hero-container p {
+  font-size: clamp(14px, 1.5vw, 15px);
+  margin: 10px 0 0 0;
+  color: var(--text-light);
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+.hero-img img {
+  width: clamp(300px, 50vw, 600px);
+  height: auto;
+  max-width: 100%;
+}
+
+/* car brand logos styles */
+.carBrand-logo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px 20px;
+}
+
+.carBrand-logo img {
+  width: 70px;
+  height: auto;
+  transition: var(--transition);
+} 
+
+.carBrand-logo img:hover {
+  transform: scale(1.1);
+}
+
+
+/* why us section */
+.why-us {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.why-us h5 {
+  color: var(--accent-color);
+  font-size: 18px;
+  margin: 0;
+}
+
+.why-us h1 {
+  margin-top: 18px;
+  font-size: clamp(32px, 5vw, 50px);
+  margin-bottom: 0;
+  color: var(--text-color);
+}
+
+.why-us p {
+  font-size: 13px;
+  margin-top: 10px;
+  color: var(--text-light);
+}
+
+.reasons {
+  width: 100%;
+  padding: 100px 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0) 0%,
+    rgba(210,220,255,1) 60%,
+    rgba(210,220,255,1) 40%,
+    rgba(255,255,255,0) 100%
+  );
+}
+
+.choose-us {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  width: 80%;
+  margin: 0 auto;
+  gap: 60px;
+  margin-bottom: 20px;
+}
+
+.all-reasons {
+  background: var(--white);
+  padding: 30px 25px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.all-reasons:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow);
+}
+
+.choose-us img {
+  height: 60px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.15));
+}
+
+.all-reasons h3 {
+  margin-top: 10px;
+  color: var(--accent-color);
+  font-size: 20px;
+}
+
+.all-reasons p {
+  margin-top: 10px;
+  color: var(--text-light);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.choose-us img {
+  height: 60px;
+  filter: invert(15%) sepia(80%) saturate(2500%) hue-rotate(220deg) brightness(85%) contrast(90%);
+}
