@@ -1,170 +1,69 @@
-/* HEADER */
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(218,227,253,0.6);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-  z-index: 999; 
+*{
+  margin: 0;
+  padding: 0;
 }
 
-/* NAVBAR */
-.navbar {
+body{
+  min-height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+nav{
+  background-color: rgba(218,227,253,0.6);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  align-content: center;
+  padding: 10px 25px;
+  font-weight: 500;
+}
+
+nav img {
+  width: 70px;
+  transition: transform 0.3s ease;
+}
+
+nav img:hover {
+  transform: scale(1.15); 
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 50px;
-  position: relative;
+  color: black;
+  transition: color  0.3s ease-in-out;
 }
 
-/* Logo and links in NAVBAR */
-.logo img {
-  width: 80px;
-  transition: transform 0.25s ease;
+nav a:hover{
+  color: rgb(23, 20, 215);
 }
 
-.logo img:hover {
-  transform: scale(1.08);
+nav li:first-child{
+  margin-right: auto;
 }
 
-.nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+nav li:last-child{
+  margin-left: auto;
 }
 
-.nav-links {
-  display: flex;
-  gap: 80px;
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #1a1a1a;
-  font-weight: 500;
-  font-size: 18px;
-  position: relative;
-  padding-bottom: 4px;
-  transition: all 0.25s ease;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #313BA0;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.nav-links a:hover {
-  color: #313BA0;
-}
-
-.login-btn {
-  padding: 10px 26px;
-  border-radius: 25px;
+.logIn-btn{
   border: 2px solid #313BA0;
-  color: #313BA0;
-  text-decoration: none;
-  font-size: 18px;
+  border-radius: 50px;
   font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.login-btn:hover {
-  background-color: #313BA0;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(49, 59, 160, 0.25);
-}
-
-/* BURGER MENU - Hides in Large Dimensions and opens in Small Dimensions*/
-.burger {
-  display: none; 
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 20px;
-  cursor: pointer;
-  z-index: 300; 
-  position: relative; 
-}
-
-.burger span {
-  display: block;
-  height: 4px;
-  width: 100%;
-  background: #313BA0;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* CREATING THE X EFFECT */
-.burger.toggle span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.burger.toggle span:nth-child(2) {
-  opacity: 0;
-}
-
-.burger.toggle span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Mobile menu that hides on desktop and appears when the user clicks the burger icon */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: -100%; 
-  width: 250px;
-  background: rgba(218,227,253,0.95);
-  backdrop-filter: blur(10px);
-  z-index: 100;
-  transition: right 0.4s ease;
-  padding: 30px 30px 30px;
-  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-  overflow-y: auto; 
-  border-radius: 20px;
-}
-
-.menu-overlay {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.2);
-  z-index: 90;
-}
-
-.menu-overlay.active {
-  opacity: 1;
-}
-
-.mobile-menu .close-menu {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 28px;
-  cursor: pointer;
   color: #313BA0;
-  transition: color 0.3s ease;
-  z-index: 310;
-}
-
-.mobile-menu .close-menu:hover {
-  color: #fafafa; 
+  transition: all 0.3s ease;
 }
