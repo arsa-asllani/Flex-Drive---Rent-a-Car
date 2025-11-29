@@ -175,3 +175,35 @@ nav li:last-child{
   box-shadow: 0 8px 20px rgba(42,63,232,0.28);
   transform: translateY(-2px); 
 }
+
+
+@media(max-width: 800px){
+  .center-links {
+    display: none;
+  }
+  .right-links {
+    margin-left: 0;
+  }
+}
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+
+@media(max-width: 500px){
+  .sidebar{
+    width: 100%;
+  }
+} 
+
+@media(max-width: 500px){
+  .sidebar li:nth-child(n+2):nth-child(-n+4) a:hover::after {
+    width: 0%;
+  }
+} 
+
