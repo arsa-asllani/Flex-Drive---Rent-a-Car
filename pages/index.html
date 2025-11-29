@@ -4,8 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <!-- website font integration -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- css files integration -->
+  <link rel="stylesheet" href="../css/header.css">
+
+
 </head>
 <body>
-  
+  <div id="header"></div>
+
+  <script>
+    fetch("../components/header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header").innerHTML = html;
+
+        const script = document.createElement("script");
+        script.src = "../js/sidebar.js";
+        document.body.appendChild(script);
+      });
+  </script>
 </body>
 </html>
