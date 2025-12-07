@@ -201,11 +201,12 @@ a:hover {
 
 @media screen and (max-width: 900px) {
   .hero-container {
+
     flex-direction: column;
     text-align: center;
     gap: 20px;
     min-height: auto;
-    padding-top: 40px;
+    padding-top: 100px;
   }
   
   .hero-content { 
