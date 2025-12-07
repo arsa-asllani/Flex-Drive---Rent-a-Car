@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Drive - Rent a Car</title>
+
+  <!-- website font integration -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- css files integration -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/car-details.css">
+</head>
+
+<body>
+  <!-- header integration -->
+  <div id="header"></div>
+
+  <main>
+    <div class="car-specs-name">
+      <div class="left">
+        <a href="car-brands.html" class="back-btn">Go Back</a>
+      </div>
+      <h1>BMW M140i <span>2018</span></h1>
+      <div class="right"></div>
+    </div>
+    
+    <section class="car-specs-description">
+      <div class="description-content">
+        <p>
+          The <strong>BMW M140i 2018</strong> is a powerful and compact hot hatch, featuring a 3.0L 
+          turbocharged engine that delivers thrilling performance with 335 hp and a 
+          sporty rear-wheel-drive experience, perfect for driving enthusiasts seeking 
+          both speed and style.
+        </p>
+      </div>
+      <div class="description-image">
+        <img src="../car-details-imgs/bmw m140i.png" alt="BMW M140i 2018">
+      </div>
+    </section>
+    
+    <section class="car-characteristics-section">
+      <div class="characteristics-container">
+        <div class="characteristics-item">
+          <div class="characteristics">
+            <img src="../car-specs-icons/car-engine.png" alt="Engine icon">
+            <h5>Engine</h5>
+          </div>
+          <p class="characteristics-value">3.0L</p>
+        </div>
+
+        <div class="characteristics-item">
+          <div class="characteristics">
+            <img src="../car-specs-icons/horse-power.png" alt="Horse power icon">
+            <h5>Power</h5>
+          </div>
+          <p class="characteristics-value">335 HP</p>
+        </div>
+
+        <div class="characteristics-item">
+          <div class="characteristics">
+            <img src="../car-specs-icons/torque.png" alt="Torque icon">
+            <h5>Torque</h5>
+          </div>
+          <p class="characteristics-value">500 Nm</p>
+        </div>
+
+        <div class="characteristics-item">
+          <div class="characteristics">
+            <img src="/car-specs-icons/manual-transmission.png" alt="Transmission icon">
+            <h5>Transmission</h5>
+          </div>
+          <p class="characteristics-value">Manual</p>
+        </div>
+
+        <div class="characteristics-item">
+          <div class="characteristics">
+            <img src="/car-specs-icons/fuel.png" alt="Fuel icon">
+            <h5>Fuel</h5>
+          </div>
+          <p class="characteristics-value">Petrol</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="driver-details">
+      <div class="car-image-container">
+        <img src="../car-details-imgs/bmw-m140i-side-view.png" alt="BMW M140i side view">
+      </div>
+      
+      <div class="form-container">
+        <h1>Driver Details</h1>
+        <form action="payment.html" method="GET">
+          <div class="name-row">
+            <div class="input-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" placeholder="First Name" required>
+            </div>
+
+            <div class="input-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" placeholder="Last Name" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="email-address">Email address</label>
+            <input type="email" id="email-address" placeholder="Enter your email address" required>
+          </div>
+
+          <div class="input-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" placeholder="Enter your phone number" required>
+          </div>
+
+          <div class="final-calculations-wrapper">
+            <h3>Final Calculations</h3>
+
+            <div class="final-calculations">
+              <h2>360 Euro <span>/ for 6 days</span></h2>
+              <button type="submit" class="pay-btn">Pay Now</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer integration -->
+  <div id="footer"></div>
+
+  <!-- header & footer integration and sidebar script -->
+  <script>
+    fetch("../components/header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header").innerHTML = html;
+
+        const script = document.createElement("script");
+        script.src = "../js/sidebar.js";
+        document.body.appendChild(script);
+      });
+
+    fetch("../components/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
