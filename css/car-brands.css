@@ -1,0 +1,261 @@
+body {
+  background: linear-gradient(to bottom, var(--primary-light) 5%, rgba(242,246,255,0) 20%);
+  margin: 0;
+  padding: 0;
+  padding-top: 130px;
+}
+
+.carBrand-logo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px 20px;
+}
+
+.carBrand-logo a {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.carBrand-logo a:hover {
+  background: rgba(22, 74, 134, 0.1);
+}
+
+.carBrand-logo img {
+  width: 70px;
+  height: auto;
+  transition: var(--transition);
+} 
+
+.carBrand-logo img:hover {
+  transform: scale(1.1);
+}
+
+.page-title-wrapper {
+  text-align: center;
+  padding: 20px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-title-wrapper h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.page-title-wrapper p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.section-separator {
+  border: none;
+  height: 1px;
+  width: min(90%, 1310px);
+  background: var(--accent-color);
+  margin: 20px auto 40px auto;
+  display: block;
+  opacity: 0.6;
+}
+
+.car-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: clamp(30px, 4vw, 60px);
+  padding: 40px clamp(20px, 5vw, 100px);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.car-card {
+  background: var(--white);
+  border: 3px solid rgba(49, 59, 160, 0.4);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: clamp(15px, 3vw, 25px);
+}
+
+.car-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent-color);
+}
+
+.car-header {
+  text-align: center;
+  margin-bottom: clamp(10px, 2vw, 15px);
+}
+
+.car-header h3 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.car-header p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.car-card img {
+  width: 75%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-left: 10%;
+}
+
+.specs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(10px, 2vw, 15px) 5px;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 15px;
+}
+
+.specs div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  flex: 1 1 30%;
+}
+
+.specs img {
+  width: 25px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.specs p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.card-footer span {
+  font-weight: 400;
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+.rent-btn {
+  font-size: 0.9rem;
+  padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 25px);
+  background-color: var(--accent-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 25px;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.rent-btn:hover {
+  background-color: rgb(0, 72, 255);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 1024px) {
+  .car-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: linear-gradient(to bottom, var(--primary-light) 1%, rgba(242,246,255,0) 10%);
+  }
+  .carBrand-logo {
+    gap: 20px;
+    padding: 20px 15px;
+  }
+  
+  .carBrand-logo img {
+    width: 50px;
+  }
+  
+  .carBrand-logo a {
+    padding: 8px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .car-cards-wrapper {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 110px;
+  }
+  
+  .carBrand-logo {
+    gap: 15px;
+    padding: 15px 10px;
+  }
+  
+  .carBrand-logo img {
+    width: 40px;
+  }
+  
+  .carBrand-logo a {
+    padding: 6px;
+  }
+  
+  .car-cards-wrapper {
+    gap: 25px;
+  }
+  
+  .car-card {
+    padding: 15px;
+  }
+  
+  .car-card img {
+    width: 80%;
+    margin-left: 10%;
+  }
+  
+  .card-footer {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .price {
+    text-align: center;
+  }
+  
+  .rent-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  
+}
