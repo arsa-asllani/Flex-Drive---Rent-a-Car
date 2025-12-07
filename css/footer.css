@@ -1,0 +1,230 @@
+/* FOOTER */
+.footer {
+  background: linear-gradient(135deg, var(--primary-light) 0%, #e8efff 100%);
+  margin-top: 80px;
+  padding: 70px clamp(30px, 5vw, 80px) 30px;
+  border-radius: 40px 40px 0 0;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr 1fr;
+  gap: clamp(30px, 4vw, 50px);
+  align-items: start;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+.footer-logo img {
+  width: clamp(70px, 8vw, 95px);
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+  transition: var(--transition);
+}
+
+.footer-logo:hover img {
+  transform: translateY(-5px);
+}
+
+.footer-logo p {
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: var(--text-color);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* DIVIDER */
+.footer-divider {
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--primary-color), transparent);
+  min-height: 180px;
+  border-radius: 20px;
+  opacity: 0.4;
+  margin: 0 10px;
+}
+
+.footer-contact,
+.footer-address {
+  text-align: left;
+}
+
+.footer-contact h2,
+.footer-address h2 {
+  margin-bottom: 25px;
+  font-size: clamp(18px, 2vw, 24px);
+  color: var(--text-color);
+  font-weight: 600;
+  position: relative;
+}
+
+.footer-contact h2::after,
+.footer-address h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.footer-contact p,
+.footer-address p {
+  margin: 15px 0;
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: var(--text-light);
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+  margin-top: 25px;
+  display: flex;
+  gap: clamp(15px, 2vw, 25px);
+  align-items: center;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: var(--white);
+  border-radius: 12px;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.footer-social a:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(22, 74, 134, 0.3);
+}
+
+.footer-social img {
+  width: clamp(20px, 2.5vw, 24px);
+  height: clamp(20px, 2.5vw, 24px);
+  transition: var(--transition);
+}
+
+.footer-social a:hover img {
+  filter: brightness(0) invert(1);
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 25px;
+  text-align: center;
+  font-size: clamp(13px, 1.5vw, 14px);
+  color: var(--text-light);
+  border-top: 1px solid rgba(22, 74, 134, 0.2);
+  background: transparent;
+  padding-bottom: 15px;
+  font-weight: 500;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 968px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px 30px;
+  }
+  
+  .footer-logo {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-divider {
+    display: none;
+  }
+  
+  .footer-contact,
+  .footer-address {
+    text-align: center;
+  }
+  
+  .footer-contact h2::after,
+  .footer-address h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-contact p,
+  .footer-address p {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    margin-top: 60px;
+    padding: 50px 25px 25px;
+    border-radius: 30px 30px 0 0;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    grid-column: 1;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .footer-social a {
+    padding: 10px;
+  }
+  
+  .footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+}
+
+/* Animation for footer elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-logo,
+.footer-contact,
+.footer-address {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.footer-contact {
+  animation-delay: 0.1s;
+}
+
+.footer-address {
+  animation-delay: 0.2s;
+}
