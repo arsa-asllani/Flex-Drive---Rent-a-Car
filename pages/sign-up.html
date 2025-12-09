@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- title and icon -->
+  <title>Sign Up - Flex Drive</title>
+  <link rel="icon" type="image/png" href="../website-logo/flexdrive-logo.png">
+  
+  <!-- website font integration -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- css files integration -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/sign-up.css">
+  
+</head>
+<body>
+  <div class="container">
+    <form id="form" action="/" novalidate>
+      <h1>Register in FlexDrive</h1>
+      <div class="input-control">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Username..." required>
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" placeholder="abcd@gmail.com" required>
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <label for="password">Password</label>
+        <input id="password"name="password" type="password" placeholder="Password..." required>
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <label for="password2">Password again</label>
+        <input id="password2"name="password2" type="password" placeholder="Retry password..." required>
+        <div class="error"></div>
+      </div>
+      <button type="submit"><strong>Sign Up</strong></button>
+      <p>You have an account? <a href="../pages/log-in.html">Sign In</a></p>
+    </form>
+  </div>
+</body>
+<script defer src="sign-up.js"></script>
+</html>
