@@ -21,6 +21,10 @@
   
 </head>
 <body>
+  <!-- header integration -->
+  <div id="header"></div>
+
+  <!-- sign up form -->
   <div class="container">
     <form id="form" action="/" novalidate>
       <h1>Register in FlexDrive</h1>
@@ -31,7 +35,7 @@
       </div>
       <div class="input-control">
         <label for="email">Email</label>
-        <input id="email" name="email" type="text" placeholder="abcd@gmail.com" required>
+        <input id="email" name="email" type="email" placeholder="abcd@gmail.com" required>
         <div class="error"></div>
       </div>
       <div class="input-control">
@@ -44,10 +48,32 @@
         <input id="password2"name="password2" type="password" placeholder="Retry password..." required>
         <div class="error"></div>
       </div>
-      <button type="submit"><strong>Sign Up</strong></button>
+      <button type="submit"><b>Sign Up</b></button>
       <p>You have an account? <a href="../pages/log-in.html">Sign In</a></p>
     </form>
   </div>
+
+  <!-- footer integration -->
+  <div id="footer"></div>
+
+  <script defer src="../js/sign-up.js"></script>
+  <!-- header & footer integration and sidebar script -->
+  <script>
+      fetch("../components/header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("header").innerHTML = html;
+
+          const script = document.createElement("script");
+          script.src = "../js/sidebar.js";
+          document.body.appendChild(script);
+        });
+
+      fetch("../components/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
 </body>
-<script defer src="sign-up.js"></script>
 </html>

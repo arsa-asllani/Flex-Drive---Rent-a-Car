@@ -1,0 +1,248 @@
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+.about-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Simple Header */
+.simple-header {
+  text-align: center;
+  padding: 40px 0 30px;
+}
+
+.page-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #4285F4;
+  margin-bottom: 10px;
+}
+
+/* Intro Section */
+.intro-section {
+  margin-bottom: 60px;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.intro-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.intro-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+/* Description Text */
+.description {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+.stats-container
+.brand-highlight {
+  color: #4285F4;
+  font-weight: 600;
+}
+
+/* Car Image */
+.car-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Stats Section */
+.stats-section {
+  background-color: #f8f9fa;
+  padding: 50px 20px;
+  margin: 60px 0;
+  border-radius: 15px;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-number {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #4285F4;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Closing Section */
+.closing-section {
+  margin-bottom: 60px;
+}
+
+.closing-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.closing-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.closing-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  order: -1; /* Image first on mobile */
+}
+
+.closing-quote {
+  font-size: 20px;
+  font-style: italic;
+  color: #1a1a1a;
+  font-weight: 500;
+  padding-left: 20px;
+  border-left: 4px solid #4285F4;
+  margin-top: 30px;
+}
+
+@media(max-width: 1000px){
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 32px;
+  }
+    
+  .intro-title {
+     font-size: 24px;
+  }
+    
+  .intro-content,
+  .closing-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+    
+  .intro-text,
+  .intro-image,
+  .closing-text,
+.closing-image {
+    min-width: 100%;
+  }
+    
+  .closing-image {
+    order: 0; /* Reset order on mobile */
+  }
+    
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+    
+  .stat-number {
+    font-size: 36px;
+  }
+    
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 15px;
+  }
+    
+  .page-title {
+    font-size: 28px;
+  }
+    
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+    
+  .stat-item {
+   padding: 15px;
+  }
+    
+  .closing-quote {
+    font-size: 18px;
+    padding-left: 15px;
+  }
+    
+  .stats-section {
+    padding: 40px 15px;
+    margin: 40px 0;
+  }
+}
+
+
+
+.intro-section,
+.stats-section,
+.closing-section {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Hover effect for images on desktop */
+@media (min-width: 769px) {
+  .car-image {
+    transition: transform 0.3s ease;
+  }
+    
+  .car-image:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Simple Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

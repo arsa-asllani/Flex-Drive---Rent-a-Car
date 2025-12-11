@@ -1,52 +1,67 @@
+body {
+  background: linear-gradient(to bottom, var(--primary-light) 10%, rgba(242,246,255,0) 70%);
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+}
+
 #form {
   width: 350px;
   margin: 10vh auto 0 auto;
   padding: 20px 35px;
-  background-color: whitesmoke;
-  border-radius: 15px;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
   font-size: 13px;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--border-color);
 }
 
 #form h1 {
-  color: #2731b3;
+  color: var(--accent-color);
   text-align: center;
+  padding-bottom: 10px;
 }
-
 
 #form button {
   padding: 13px;
   margin-top: 10px;
   width: 100%;
-  color: white;
-  background-color: rgb(41, 57, 194);
+  color: var(--white);
+  background-color: var(--primary-color);
   border: none;
   border-radius: 20px;
-  transition: all 0.25s ease;
+  transition: var(--transition);
   cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 #form button:hover {
-  background: #3d5be0; 
+  background: var(--primary-hover); 
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow);
 }
 
 .input-control {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .input-control input {
-  border: 2px solid #f0f0f0;
-	border-radius: 10px;
-	display: block;
-	font-size: 12px;
-	padding: 10px;
-	width: 100%;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  transition: var(--transition);
 }
 
 .input-control input:focus {
   outline: 0;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(22, 74, 134, 0.1);
 }
 
 .input-control.success input {
@@ -61,18 +76,28 @@
   color: #ff3860;
   font-size: 9px;
   height: 13px;
+  margin-top: 3px;
 }
 
 .input-control label {
   padding-bottom: 5px;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
-p{
+p {
   text-align: center;
   padding-top: 5px;
+  color: var(--text-light);
 }
 
-a{
+a {
   text-decoration: none;
-  color: #364be9;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-hover);
 }

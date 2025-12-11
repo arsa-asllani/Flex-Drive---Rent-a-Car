@@ -21,9 +21,7 @@ body {
   transition: var(--transition);
 }
 
-.carBrand-logo a:hover {
-  background: rgba(22, 74, 134, 0.1);
-}
+
 
 .carBrand-logo img {
   width: 70px;
