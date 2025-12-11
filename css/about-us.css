@@ -1,5 +1,4 @@
 body {
-  font-family: "Lexend Deca", sans-serif;
   background-color: #ffffff;
   color: #333;
   line-height: 1.6;
@@ -149,7 +148,7 @@ body {
   }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .page-title {
     font-size: 32px;
@@ -168,7 +167,7 @@ body {
   .intro-text,
   .intro-image,
   .closing-text,
-.closing-image {
+  .closing-image {
     min-width: 100%;
   }
     
