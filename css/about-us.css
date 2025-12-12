@@ -1,9 +1,6 @@
-body {
-  background-color: var(--background);
-  color: var(--text-color);
-  line-height: 1.6;
+body{
+  margin-top: 70px;
 }
-
 .about-container {
   max-width: 1300px;
   margin: 0 auto;
@@ -70,8 +67,6 @@ body {
 .car-image {
   max-width: 100%;
   height: auto;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
 }
 
 /* Stats Section */
@@ -106,7 +101,6 @@ body {
 }
 
 .stat-number {
-  font-family: "Lexend Deca", sans-serif;
   font-size: 42px;
   font-weight: 700;
   color: var(--primary-color);
@@ -120,10 +114,6 @@ body {
 }
 
 /* Closing Section */
-.closing-section {
-  margin-bottom: 60px;
-}
-
 .closing-content {
   display: flex;
   align-items: center;
@@ -144,7 +134,7 @@ body {
 }
 
 .closing-quote {
-  font-size: 20px;
+  font-size: 17px;
   font-style: italic;
   color: var(--text-color);
   font-weight: 500;
@@ -199,7 +189,11 @@ body {
   }
     
   .description {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .closing-quote{
+    font-size: 13px;
   }
 }
 
@@ -246,18 +240,5 @@ body {
     
   .car-image:hover {
     transform: scale(1.02);
-    box-shadow: var(--shadow);
-  }
-}
-
-/* Simple Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
