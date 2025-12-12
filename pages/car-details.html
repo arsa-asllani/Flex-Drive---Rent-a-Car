@@ -27,7 +27,7 @@
   <main>
     <div class="car-specs-name">
       <div class="left">
-        <a href="car-brands.html" class="back-btn">Go Back</a>
+        <a href="bmw.html" class="back-btn">Go Back</a>
       </div>
       <h1>BMW M140i <span>2018</span></h1>
       <div class="right"></div>
@@ -43,7 +43,7 @@
         </p>
       </div>
       <div class="description-image">
-        <img src="../car-details-imgs/bmw m140i.png" alt="BMW M140i 2018">
+        <img src="../car-details-imgs/bmw m140i-side-view.png" alt="BMW M140i side view">
       </div>
     </section>
     
@@ -75,7 +75,7 @@
 
         <div class="characteristics-item">
           <div class="characteristics">
-            <img src="/car-specs-icons/manual-transmission.png" alt="Transmission icon">
+            <img src="../car-specs-icons/manual-transmission.png" alt="Transmission icon">
             <h5>Transmission</h5>
           </div>
           <p class="characteristics-value">Manual</p>
@@ -83,7 +83,7 @@
 
         <div class="characteristics-item">
           <div class="characteristics">
-            <img src="/car-specs-icons/fuel.png" alt="Fuel icon">
+            <img src="../car-specs-icons/fuel.png" alt="Fuel icon">
             <h5>Fuel</h5>
           </div>
           <p class="characteristics-value">Petrol</p>
@@ -93,32 +93,36 @@
 
     <section class="driver-details">
       <div class="car-image-container">
-        <img src="../car-details-imgs/bmw-m140i-side-view.png" alt="BMW M140i side view">
+        <img src="../car-details-imgs/bmw-m140i.png" alt="BMW M140i">
       </div>
       
       <div class="form-container">
         <h1>Driver Details</h1>
-        <form action="#" method="GET">
+        <form id="driver-form" novalidate>
           <div class="name-row">
-            <div class="input-group">
+            <div class="input-control">
               <label for="first-name">First Name</label>
-              <input type="text" id="first-name" placeholder="First Name" required>
+              <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+              <div class="error"></div>
             </div>
 
-            <div class="input-group">
+            <div class="input-control">
               <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" placeholder="Last Name" required>
+              <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+              <div class="error"></div>
             </div>
           </div>
 
-          <div class="input-group">
-            <label for="email-address">Email address</label>
-            <input type="email" id="email-address" placeholder="Enter your email address" required>
+          <div class="input-control">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email address" required>
+            <div class="error"></div>
           </div>
 
-          <div class="input-group">
+          <div class="input-control">
             <label for="phone-number">Phone Number</label>
-            <input type="tel" id="phone-number" placeholder="Enter your phone number" required>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="Enter your phone number" required>
+            <div class="error"></div>
           </div>
 
           <div class="final-calculations-wrapper">
@@ -126,13 +130,147 @@
 
             <div class="final-calculations">
               <h2>360 Euro <span>/ for 6 days</span></h2>
-              <button type="submit" class="pay-btn">Pay Now</button>
+              <button type="submit" class="pay-btn" id="payNowButton">Pay Now</button>
             </div>
           </div>
         </form>
       </div>
     </section>
   </main>
+
+  <!-- MODAL 1 - CASH PAYMENT INFO & RULES -->
+  <div id="cashModal" class="modal">
+    <div class="modal-box">
+      <button class="close-btn">&times;</button>
+      <h2>💵 Cash Payment Information</h2>
+      
+      <div class="cash-info">
+        <div class="info-item">
+          <div class="info-icon">💰</div>
+          <div class="info-text">
+            <h4>Payment Method: Cash Only</h4>
+            <p>We accept cash payments when you pick up the car.</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <div class="info-text">
+            <h4>Office Hours</h4>
+            <p>8:00 AM - 8:00 PM (Monday - Sunday)</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">📋</div>
+          <div class="info-text">
+            <h4>Required Documents</h4>
+            <p>• Valid ID Card or Passport</p>
+            <p>• Driver's License</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon">⚠️</div>
+          <div class="info-text">
+            <h4>Important Notes</h4>
+            <p>• Payment is made when you pick up the car</p>
+            <p>• No credit/debit cards accepted</p>
+            <p>• Bring the printed receipt when picking up the car</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="terms-agree">
+        <input type="checkbox" id="agreeTerms">
+        <label for="agreeTerms">I understand and agree to pay cash on pickup</label>
+      </div>
+      
+      <div class="buttons">
+        <button class="cancel-btn">Cancel</button>
+        <button class="proceed-btn" id="proceedBtn">Agree & Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2 - RECEIPT WITH TOTAL & CODE -->
+  <div id="receiptModal" class="modal">
+    <div class="modal-box receipt-box">
+      <button class="close-btn">&times;</button>
+      
+      <div class="receipt-header">
+        <h2>FlexDrive Car Rental</h2>
+        <p>Reservation Receipt</p>
+      </div>
+      
+      <div class="receipt-content">
+        <div class="receipt-section">
+          <h4>Reservation Details</h4>
+          <div class="receipt-row">
+            <span>Reservation Code:</span>
+            <strong id="reservationCode">FD-2024-00123</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Car:</span>
+            <span>BMW M140i 2018</span>
+          </div>
+          <div class="receipt-row">
+            <span>Rental Period:</span>
+            <span>6 days</span>
+          </div>
+        </div>
+        
+        <div class="receipt-section">
+          <h4>Customer Information</h4>
+          <div class="receipt-row">
+            <span>Name:</span>
+            <span id="customerName">John Doe</span>
+          </div>
+          <div class="receipt-row">
+            <span>Email:</span>
+            <span id="customerEmail">john@example.com</span>
+          </div>
+          <div class="receipt-row">
+            <span>Phone:</span>
+            <span id="customerPhone">+1234567890</span>
+          </div>
+        </div>
+        
+        <div class="receipt-section">
+          <h4>Payment Summary</h4>
+          <div class="receipt-row">
+            <span>Car rental (6 days):</span>
+            <span>€360.00</span>
+          </div>
+          <div class="receipt-row">
+            <span>Tax (18%):</span>
+            <span>€64.80</span>
+          </div>
+          <!-- <div class="receipt-row total-row"> -->
+          <div>
+            <span>Total to pay (cash):</span>
+            <strong>€424.80</strong>
+          </div>
+        </div>
+        
+        <!-- <div class="receipt-section important-info">
+          <h4>⚠️ Important Information</h4>
+          <p><strong>Payment Method:</strong> Cash only at pickup</p>
+          <p><strong>Office Hours:</strong> 8:00 AM - 8:00 PM</p>
+          <p><strong>Required Documents:</strong> ID Card/Passport & Driver's License</p>
+          <p><strong>Bring this receipt</strong> when picking up the car</p>
+        </div> -->
+      </div>
+      
+      <div class="receipt-footer">
+        <div class="buttons">
+          <button class="print-btn" id="printBtn">Print Receipt</button>
+          <button class="home-btn" id="homeBtn">Return to Home</button>
+        </div>
+        <p class="footer-note">Thank you for choosing FlexDrive!</p>
+      </div>
+    </div>
+  </div>
 
   <!-- footer integration -->
   <div id="footer"></div>
@@ -155,5 +293,6 @@
         document.getElementById("footer").innerHTML = data;
       });
   </script>
+  <script src="../js/driverDetailsValidation.js" defer></script>
 </body>
 </html>
